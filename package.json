@@ -4,21 +4,14 @@
   "description": "Router built with webcomponents",
   "main": "index.js",
   "scripts": {
-    "deploy": "copyfiles demo/*.js demo.html element-router.js router-link.js public && firebase deploy",
-    "serve": "ws --spa index.html",
+    "deploy": "copyfiles demo/**/*.js demo.html router/router-outlet.element.js router/router-link.element.js public && firebase deploy",
+    "serve": "ws --spa demo.html",
     "checksize": "uglifyjs router/router-outlet.element.js -mc --toplevel | gzip -9 | wc -c"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sandorengholm/webcomponents-router.git"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/sandorengholm/webcomponents-router/issues"
-  },
-  "homepage": "https://github.com/sandorengholm/webcomponents-router#readme",
   "devDependencies": {
+    "copyfiles": "^1.2.0",
     "local-web-server": "^2.3.0",
     "uglify-es": "^3.3.7"
   }
