@@ -1,10 +1,14 @@
 # webcomponents-router
-Router built with webcomponents
+Router built with webcomponents and custom elements
 
-How to setup:
+### How to setup:
 
 - Clone or download repository
-- Run a web server from the downloaded/cloned directory (in Terminal use: "python -m SimpleHTTPServer 8000")
+- Run "npm install"
+- Run "npm run serve"
 - Navigate to http://localhost:8000/ in your favorite browser
+
+### Try it out:
+[Demo](https://webcomponents-router.firebaseapp.com)
 
 Enjoy :)
