@@ -4,7 +4,7 @@
   "description": "Router built with webcomponents",
   "main": "index.js",
   "scripts": {
-    "deploy":"copyfiles demo/*.js demo.html element-router.js router-link.js public && firebase deploy",
+    "deploy": "copyfiles demo/*.js demo.html element-router.js router-link.js public && firebase deploy",
     "serve": "ws --spa index.html",
     "checksize": "uglifyjs router/router-outlet.element.js -mc --toplevel | gzip -9 | wc -c"
   },
