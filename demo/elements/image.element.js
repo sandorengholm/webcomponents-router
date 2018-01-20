@@ -29,7 +29,6 @@ class SebImage extends HTMLElement {
                 outline: none;
             }
             img {
-                position: relative;
                 width: 100%;
             }
             .container {

@@ -33,14 +33,14 @@ class RouterOutlet extends HTMLElement {
 
     //Fires on load and routechange
     _updateRendering() {
-        //Create element from route
-        var element = document.createElement(this.routes[this.currentroute]);
+        //Create output from route
+        var output = document.createElement(this.routes[this.currentroute]);
         //Empty shadow
         while (this.shadow.firstChild) {
             this.shadow.removeChild(this.shadow.firstChild);
         }
         //Append element to shadow
-        this.shadow.appendChild(element);
+        this.shadow.appendChild(output);
     }
 
     getCurrentRoute() {
