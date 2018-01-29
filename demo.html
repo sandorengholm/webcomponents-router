@@ -1,44 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Web Components - Router Demo</title>
-    <!--Dummy styling-->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Web Components - Router Demo</title>
+	<!--Dummy styling-->
+	<style>
+		body {
+			font-family: sans-serif;
+		}
+
+		h1,
+		h4,
+		p {
+			font-weight: 100;
+		}
+	</style>
+</head>
+
+<body>
+	<!--Introduction-->
+	<h1>Web Components - Router Demo</h1>
+	<h4>Press the buttons to change the state shown in the router outlet. Also try using your browser's native navigation buttons to go to previous states.</h4>
+
+	<!--Router links for navigating routes-->
+	<router-link href="/route1">Route 1</router-link>
+	<router-link href="/route2">Route 2</router-link>
+	<router-link href="/imagetest">Image Element</router-link>
+	<router-link href="/">Home</router-link>
+
+	<!--Router outlet where the defined element of the route outputs to-->
+	<router-outlet></router-outlet>
+
     <style>
-        body {
-            font-family: sans-serif;
+        .image {
+            width: 100%;
+            overflow: hidden;
         }
-        h1, h4, p {
-            font-weight: 100;
+        .image img {
+            width: 100%;
+        }
+        .seb-arrow {
+            width: 50px;
+            height: 50px;
+            background-color: white;
         }
     </style>
-</head>
-<body>
-    <!--Introduction-->
-    <h1>Web Components - Router Demo</h1>
-    <h4>Press the buttons to change the state shown in the router outlet. Also try using your browser's native navigation buttons to go to previous states.</h4>
+    <!-- Simple Slider -->
+	<seb-slider slider-width="100%" slides-to-show="4" slides-to-slide="4" initial-slide="1">
+		<div class="image"><img src="https://picsum.photos/400/200"></div>
+		<div class="image"><img src="https://picsum.photos/400/200"></div>
+		<div class="image"><img src="https://picsum.photos/400/200"></div>
+		<div class="image"><img src="https://picsum.photos/400/200"></div>
+		<div class="image"><img src="https://picsum.photos/400/200"></div>
+		<div class="image"><img src="https://picsum.photos/400/200"></div>
+	</seb-slider>
 
-    <!--Router links for navigating routes-->
-    <router-link href="/route1">Route 1</router-link>
-    <router-link href="/route2">Route 2</router-link>
-    <router-link href="/imagetest">Image Element</router-link>
-    <router-link href="/">Home</router-link>
+	<!--Scripts-->
+	<script src="router/router-link.element.js"></script>
+	<script src="router/router-outlet.element.js"></script>
+	<script src="demo/elements/route-one.element.js"></script>
+	<script src="demo/elements/route-two.element.js"></script>
+	<script src="demo/elements/image.element.js"></script>
+	<script src="demo/components/pokemon.component.js"></script>
+	<script src="slider/slider.element.js"></script>
 
-    <!--Router outlet where the defined element of the route outputs to-->
-    <router-outlet></router-outlet>
-
-    <seb-pokemon name="pikachu" experience="100" weight="5.3kg"></seb-pokemon>
-    <seb-pokemon name="bulbasaur" experience="99" weight="7.1kg"></seb-pokemon>
-
-    <!--Scripts-->
-    <script src="router/router-link.element.js"></script>
-    <script src="router/router-outlet.element.js"></script>
-    <script src="demo/elements/route-one.element.js"></script>
-    <script src="demo/elements/route-two.element.js"></script>
-    <script src="demo/elements/image.element.js"></script>
-    <script src="demo/components/pokemon.component.js"></script>
-    
 </body>
+
 </html>
